@@ -26,3 +26,14 @@ function actualizarListaEnPantalla(){
     }
     
 }
+
+function sortearAmigo(){
+
+    //Si la lista amigos no está vacía, elegímos aleatoriamente un índice y mostramos en la página el nombre asociado a ese índice.
+    if(amigos.length != 0){
+        let indiceAleatorio = Math.floor(Math.random()*amigos.length);
+        document.getElementById("resultado").innerHTML = amigos[indiceAleatorio];
+    }else{
+        alert("Ingrese al menos un nombre.");
+    }
+}
